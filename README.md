@@ -1,2 +1,2 @@
 # react-tutorial-hell
-small projects for practice
+small to medium projects for practice
