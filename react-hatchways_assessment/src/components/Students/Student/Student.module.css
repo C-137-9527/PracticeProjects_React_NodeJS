@@ -1,0 +1,36 @@
+/* student container */
+.container {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem;
+  border-bottom: var(--border-bottom_thin) solid var(--darkColor_light);
+  background: white;
+}
+
+/* avatar */
+.container img {
+  width: 130px;
+  border-radius: 50%;
+  border: 1px solid var(--darkColor_light);
+}
+
+/* fullname */
+.details h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  text-indent: -1.3rem;
+}
+
+/* details */
+.details p {
+  line-height: 1.5;
+  font-weight: var(--fontWeight_light);
+}
+
+/* filter class */
+.container.hideStudent {
+  display: none;
+}

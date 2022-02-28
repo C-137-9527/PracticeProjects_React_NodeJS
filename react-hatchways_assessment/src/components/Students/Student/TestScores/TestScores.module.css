@@ -1,0 +1,25 @@
+/* scores list container */
+.testScores ul {
+  padding-top: 1rem;
+}
+/* each list item */
+.testScores li {
+  list-style-type: none;
+  font-weight: var(--fontWeight_light);
+}
+/* the percentage value */
+.testScores li span {
+  margin-left: 1.5rem;
+}
+
+/* show/hide button */
+.testScores button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--darkColor_medium);
+  cursor: pointer;
+}

@@ -1,0 +1,14 @@
+/* students list container */
+.studentsList {
+  position: relative;
+}
+
+/* no match message */
+.noMatchMessage {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: salmon;
+  z-index: -1;
+}

@@ -1,0 +1,35 @@
+/* container */
+.searchBar {
+  padding: 1rem 2rem;
+}
+
+/* input */
+.searchBar input {
+  display: block;
+  height: 3rem;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--darkColor_light);
+  outline: none;
+  font-size: 1.3rem;
+  font-weight: var(--fontWeight_light);
+  transition: border-bottom 300ms;
+}
+.searchBar input:last-of-type {
+  margin-top: 1rem;
+  border-bottom: 2px solid var(--darkColor_light);
+}
+
+/* when user is searching */
+.searchBar input:first-of-type:focus-visible {
+  border-bottom: var(--border-bottom_thin) solid var(--darkColor_dark);
+}
+.searchBar input:last-of-type:focus-visible {
+  border-bottom: 2px solid var(--darkColor_medium);
+}
+
+/* invalid entry */
+.searchBar input.invalidEntry {
+  border: 3px solid rgba(128, 0, 77, 0.3);
+  box-shadow: 0 0 5px rgba(128, 0, 77, 0.3);
+}

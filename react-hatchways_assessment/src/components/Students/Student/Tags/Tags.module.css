@@ -1,0 +1,41 @@
+/* tags list container */
+.tags ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* each list item */
+.tags li {
+  list-style: none;
+  padding: 0.6rem;
+  background: var(--darkColor_light);
+  border-radius: 5px;
+  font-weight: var(--fontWeight_light);
+}
+
+/* adding tag input */
+.tags input {
+  margin-top: 1rem;
+  height: 2rem;
+  width: 55%;
+  border: none;
+  border-bottom: 1px solid var(--darkColor_light);
+  outline: none;
+  font-size: 1rem;
+  font-weight: var(--fontWeight_light);
+  transition: border-bottom 300ms;
+}
+/* when user is entering */
+.tags input:focus-visible {
+  border-bottom: var(--border-bottom_thin) solid var(--darkColor_dark);
+}
+
+/* invalid entry */
+.tags input.invalidEntry {
+  border: 3px solid rgba(128, 0, 77, 0.3);
+  box-shadow: 0 0 5px rgba(128, 0, 77, 0.3);
+}
