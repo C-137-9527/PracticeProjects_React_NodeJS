@@ -1,0 +1,32 @@
+.list {
+  padding: 0 3rem;
+  max-height: 70vh;
+  overflow: scroll;
+}
+
+.listTitles {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  margin: 1rem 0;
+  color: #aeb4bd;
+}
+
+.listTitles > * {
+  word-break: break-all;
+  overflow: scroll;
+}
+
+.cartonsList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2px;
+  background: #e6e6e6;
+}
+
+/* no data */
+.noData {
+  text-align: center;
+  color: coral;
+}

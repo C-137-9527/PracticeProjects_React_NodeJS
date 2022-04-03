@@ -1,0 +1,64 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 1rem 0;
+  background: #fff;
+  list-style: none;
+  transition: background 300ms;
+}
+
+.list:hover {
+  background: #fdf6ed;
+}
+
+/* wrap overlaping text */
+.list > * {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  word-break: break-all;
+}
+
+.list p {
+  font-weight: 300;
+}
+
+/* id span */
+.list p:first-child {
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 500ms ease-out;
+}
+.list p:first-child:active {
+  color: #61c48d;
+  opacity: 0;
+  transition: none;
+}
+
+/* buttons */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.buttons button:first-of-type {
+  background: #f3a633;
+}
+
+.buttons button:last-of-type {
+  background: #eb655e;
+}

@@ -1,0 +1,75 @@
+.form {
+  position: relative;
+  display: grid;
+  place-items: center;
+  gap: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3rem 5rem;
+  border-radius: 3px;
+  background: #61c48d;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+}
+
+/* title */
+.form p {
+  color: white;
+  font-size: 2rem;
+}
+
+/* all inputs */
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(1fr, 2);
+  gap: 30px;
+}
+
+.inputs input {
+  width: 20rem;
+  height: 3rem;
+  padding-left: 1rem;
+  outline: none;
+  font-weight: 300;
+  border: #d0d3d9 1px solid;
+  border-radius: 3px;
+  color: #152542;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.inputs input::placeholder {
+  color: hsl(220, 11%, 63%);
+}
+
+/* button */
+.form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: box-shadow 300ms;
+}
+
+/* button on hover */
+.form button:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* close button */
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* form - while eiditing */
+.editCurrentCarton {
+  background: #f3a633;
+}

@@ -1,0 +1,26 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: #f2f3fa;
+}
+
+.hero div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero .icon {
+  padding: 0.8rem;
+  border-radius: 10px;
+  background: #5b4dfc;
+  color: white;
+  font-size: 3rem;
+}
+
+/* count highlight */
+.count {
+  color: #5b4dfc;
+}
