@@ -1,0 +1,61 @@
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  gap: 3rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.addNewItemButton,
+.exportXlsx,
+.importXlsx {
+  width: 8rem;
+  height: 2.5rem;
+  background: var(--blue);
+  border: none;
+  border-radius: var(--borderRadius);
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.importXlsx {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.importXlsx input {
+  position: absolute;
+  top: -500px;
+}
+
+.table {
+  width: 100%;
+  max-height: 40rem;
+  padding: 1rem 3rem;
+  overflow: scroll;
+}
+
+/* table header */
+.table thead tr {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: start;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 15px;
+  color: hsl(220, 11%, 63%);
+}
+
+.table thead th {
+  font-weight: 300;
+  font-size: 1.1rem;
+}
