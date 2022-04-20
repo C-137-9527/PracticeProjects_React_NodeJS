@@ -1,0 +1,101 @@
+.itemList {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: start;
+  align-items: start;
+  gap: 50px;
+  color: var(--darkBlue);
+  border-bottom: 2px solid #e6e6e6;
+}
+
+/* on hover, highlight row */
+.itemList:hover {
+  background: #fdf6ed;
+}
+
+.itemList td {
+  padding: 15px 0;
+  word-break: break-all;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+/* buttons container */
+.itemList td:last-of-type {
+  display: flex;
+  gap: 15px;
+}
+
+.itemList td button {
+  padding: 0.3rem 0.5rem;
+  background: var(--orange);
+  border: none;
+  border-radius: var(--borderRadius);
+  color: white;
+  word-break: keep-all;
+}
+
+.itemList td button:last-child {
+  background: var(--red);
+}
+
+/* highlight sku cells */
+.itemList .sku {
+  font-weight: 500;
+}
+
+/* delete confirm message */
+.deleteConfirmMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3rem 5rem;
+  background: var(--red);
+  border-radius: var(--borderRadius);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.deleteConfirmMessage span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--darkBlue);
+}
+
+.deleteConfirmMessage .buttons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 2rem;
+}
+
+.deleteConfirmMessage button {
+  width: 6rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: var(--borderRadius);
+  background: none;
+  border: 1px solid white;
+  color: white;
+  word-break: keep-all;
+  font-size: 1rem;
+  transition-property: background, color, font-weight;
+  transition-duration: 200ms;
+}
+
+.deleteConfirmMessage button:first-child:hover {
+  background: white;
+  color: red;
+  font-weight: 900;
+}
+
+.deleteConfirmMessage button:nth-child(2):hover {
+  background: white;
+  color: var(--darkBlue);
+  font-weight: 900;
+}

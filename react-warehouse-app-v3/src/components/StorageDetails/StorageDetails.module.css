@@ -1,0 +1,78 @@
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  gap: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .tools {
+    justify-content: center;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 1000px) {
+  .buttons {
+    justify-content: center;
+  }
+}
+
+.addNewItemButton,
+.exportXlsx,
+.importXlsx {
+  width: 8rem;
+  height: 2.1rem;
+  background: var(--blue);
+  border: none;
+  border-radius: var(--borderRadius);
+  color: white;
+  font-size: 1rem;
+}
+
+.exportXlsx {
+  background: #386fa4;
+}
+
+.importXlsx {
+  background: #59a5d8;
+}
+
+.importXlsx {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.importXlsx input {
+  position: absolute;
+  top: -500px;
+}
+
+.table {
+  width: 100%;
+  padding: 1rem 3rem;
+}
+
+/* table header */
+.table thead tr {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: start;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 15px;
+  color: hsl(220, 11%, 63%);
+}
+
+.table thead th {
+  font-weight: 300;
+  font-size: 1rem;
+}
