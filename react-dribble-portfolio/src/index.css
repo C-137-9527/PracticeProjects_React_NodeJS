@@ -1,0 +1,29 @@
+/* TODO: SET APP MAX WIDTH, ON ULTRA WIDE SCREEN CENTER APP */
+
+/* basic setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+:root {
+  --appPadding: 50px;
+}

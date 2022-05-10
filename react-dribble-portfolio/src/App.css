@@ -1,0 +1,10 @@
+/* TODO: SET APP MAX WIDTH, ON ULTRA WIDE SCREEN CENTER APP */
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  width: clamp(1050px, 100vw, 1300px);
+  padding: var(--appPadding);
+  background: white;
+  z-index: -10;
+}

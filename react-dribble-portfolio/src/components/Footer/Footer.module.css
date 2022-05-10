@@ -1,0 +1,13 @@
+.footer ul {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.footer li {
+  text-decoration: underline;
+}
