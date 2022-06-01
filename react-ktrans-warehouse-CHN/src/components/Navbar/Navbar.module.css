@@ -1,0 +1,137 @@
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .navbar,
+  .navbar ul {
+    flex-direction: column;
+  }
+  .navbar li:last-of-type {
+    margin: auto;
+  }
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  gap: 50px;
+  width: 100%;
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar li:last-of-type {
+  margin-left: auto;
+}
+
+/* navlinks when not active */
+.navlink {
+  padding: 0 1rem 1.5rem;
+  text-decoration: none;
+  color: var(--darkBlue);
+}
+
+/* when navlink is active */
+.active {
+  padding: 0 1rem 1.5rem;
+  color: var(--blue);
+  text-decoration: none;
+  border-bottom: 3px solid var(--blue);
+}
+
+/* icon */
+.icon {
+  margin-right: 10px;
+}
+
+/* logo */
+.logo {
+  color: var(--blue);
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: 'Eczar', serif;
+}
+
+/* user icon */
+.user {
+  cursor: pointer;
+}
+
+/* login window */
+.loginWindow,
+.logoutWindow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--green);
+  padding: 3rem 1.5rem;
+  border-radius: var(--borderRadius);
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.loginWindow .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.loginWindow input {
+  width: 15rem;
+  height: 2rem;
+  padding: 1rem;
+  padding-left: 1rem;
+  outline: none;
+  border: #d0d3d9 1px solid;
+  border-radius: var(--borderRadius);
+  color: var(--darkBlue);
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.buttons button {
+  width: 6rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: var(--borderRadius);
+  background: none;
+  border: 1px solid white;
+  color: white;
+  font-size: 1rem;
+  transition-property: background, color, font-weight;
+  transition-duration: 200ms;
+}
+
+.buttons button:first-child:hover {
+  background: white;
+  color: var(--green);
+  font-weight: 900;
+}
+
+.buttons button:nth-child(2):hover {
+  background: white;
+  color: var(--red);
+  font-weight: 900;
+}
