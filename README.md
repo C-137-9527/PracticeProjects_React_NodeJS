@@ -1,1 +1,1 @@
-small to medium projects for practice
+follow along tutorial projects
