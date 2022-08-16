@@ -1,0 +1,87 @@
+.head {
+  position: relative;
+  /* outlines around the head */
+  box-shadow:
+            /* top  */ 0 -5px 0 black, /* bottom */ 0 5px 0 black,
+    /* left */ -5px 0 0 black, /* right */ 5px 0 0 black;
+
+  /* face */
+  width: 50px;
+  height: 45px;
+  background: white;
+}
+
+/* forehead shadow */
+.head__forehead {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 10px;
+  background: hsl(0, 0%, 93%);
+}
+
+/* face shadow */
+.head__faceShadow {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  width: 50px;
+  height: 25px;
+  background: linear-gradient(
+    to right,
+    white 5px,
+    lightgray 5px 45px,
+    darkgray 45px 50px
+  );
+  border-bottom: 5px solid darkgray;
+}
+
+/* eyes */
+.head::before,
+.head::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 5px;
+  height: 15px;
+  background: black;
+  z-index: 10;
+  animation: blink 3000ms infinite;
+  transform-origin: center;
+}
+@keyframes blink {
+  0%,
+  4%,
+  12% {
+    transform: scaleY(1);
+  }
+  8% {
+    transform: scaleY(0.1);
+  }
+}
+
+/* left eye */
+.head::before {
+  left: 10px;
+}
+
+/* right eye */
+.head::after {
+  right: 10px;
+}
+
+/* walk animation */
+.head.walking {
+  z-index: 9;
+  animation: walking-head 400ms infinite steps(1, end);
+}
+@keyframes walking-head {
+  0%,
+  100% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+}

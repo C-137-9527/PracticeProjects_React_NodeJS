@@ -1,0 +1,22 @@
+/* the viewport */
+.viewport {
+  position: relative;
+  width: 700px;
+  height: 650px;
+  border: 5px solid white;
+  overflow: scroll;
+}
+
+/* hide scrollbar */
+.viewport::-webkit-scrollbar {
+  display: none;
+}
+
+/* blue sky background */
+.sky {
+  display: grid;
+  place-items: center;
+  width: 1700px;
+  height: 1500px;
+  background: rgb(100, 221, 247);
+}

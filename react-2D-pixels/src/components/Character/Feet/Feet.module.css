@@ -1,0 +1,58 @@
+/* feet container */
+.feet {
+  position: relative;
+  width: 40px;
+}
+
+/* feet */
+.feet::before,
+.feet::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 5px;
+  height: 5px;
+  background: lightgray;
+  border: 5px solid black;
+  border-top: none;
+}
+
+/* left foot */
+.feet::before {
+  left: 0;
+}
+
+/* right foot */
+.feet::after {
+  right: 0;
+}
+
+/* walking animation - left foot */
+.walking.feet::before {
+  animation: walking-leftFoot 800ms infinite steps(1, end);
+}
+
+@keyframes walking-leftFoot {
+  0%,
+  100% {
+    top: -10px;
+  }
+  50% {
+    top: -5px;
+  }
+}
+
+/* walking animation - right foot */
+.walking.feet::after {
+  animation: walking-rightFoot 800ms infinite steps(1, end);
+}
+
+@keyframes walking-rightFoot {
+  0%,
+  100% {
+    top: -5px;
+  }
+  50% {
+    top: -10px;
+  }
+}

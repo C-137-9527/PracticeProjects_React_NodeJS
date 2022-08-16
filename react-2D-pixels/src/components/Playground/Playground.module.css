@@ -1,0 +1,11 @@
+.playground {
+  position: relative;
+  width: 1000px;
+  height: 700px;
+  box-shadow: 
+    /* top outline */ 0 -5px 0 black,
+    /* left outline */ -5px 0 0 black, /* right outline */ 5px 0 0 black,
+    /* bottom shadow */ 0 10px 0 rgba(0, 0, 0, 0.4);
+  border-bottom: 5px solid black;
+  /* transform: translate(-50%); */
+}

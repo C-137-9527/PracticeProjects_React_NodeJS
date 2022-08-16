@@ -1,0 +1,14 @@
+/* project description */
+.description {
+  position: absolute;
+  bottom: 15px;
+  left: 25px;
+  width: calc((100vw - 770px) / 2);
+  font-size: 10px;
+  line-height: 2.5;
+}
+
+/* list style */
+.description li {
+  list-style: square;
+}

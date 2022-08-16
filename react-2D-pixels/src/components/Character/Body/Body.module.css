@@ -1,0 +1,84 @@
+/* body */
+.body {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(lightgray 70%, darkgray 70%);
+  border: 5px solid black;
+}
+
+/* hands */
+.body::before,
+.body::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+}
+
+/* left hand */
+.body::before {
+  left: -10px;
+  background: linear-gradient(to top left, white 50%, transparent 50% 50%);
+
+  /* upper shadow for right hand. cannot set on the same hand because of transparent background */
+  box-shadow: 45px 0 0 -5px black, 40px -5px 0 -5px black,
+    35px -10px 0 -5px black, 40px 0 0 -5px white, 35px -5px 0 -5px white;
+
+  /* bottom outline */
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+/* right hand */
+.body::after {
+  right: -10px;
+  background: linear-gradient(to bottom left, transparent 50%, white 50% 100%);
+
+  /* upper shadow for left hand */
+  box-shadow: -45px 0 0 -5px black, -40px -5px 0 -5px black,
+    -35px -10px 0 -5px black, -40px 0 0 -5px white, -35px -5px 0 -5px white;
+
+  /* bottom outline */
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+/* walking animations - left hand */
+.walking.body::before {
+  background: white;
+  box-shadow: none;
+  animation: walking-leftHand 800ms infinite steps(1, end);
+}
+
+@keyframes walking-leftHand {
+  0%,
+  100% {
+    top: 5px;
+    z-index: -1;
+  }
+  50% {
+    top: 0;
+    z-index: 10;
+  }
+}
+
+/* walking animations - right hand */
+.walking.body::after {
+  background: white;
+  box-shadow: none;
+  animation: walking-rightHand 800ms infinite steps(1, end);
+}
+
+@keyframes walking-rightHand {
+  0%,
+  100% {
+    top: 0;
+    z-index: 10;
+  }
+  50% {
+    top: 5px;
+    z-index: -1;
+  }
+}

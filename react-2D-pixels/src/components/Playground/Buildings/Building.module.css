@@ -1,0 +1,146 @@
+/* buildings - container */
+.buildings {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 80;
+}
+
+/* walls on both sides */
+.buildings__wall {
+  position: relative;
+  height: 145px;
+  width: 295px;
+  background: linear-gradient(
+    /* top side */ #c4c0dd 70px,
+    /* turning point */ #dcdbe6 70px 75px,
+    /* bottom side */ #8d93bf 75px
+  );
+  border-bottom: 5px solid black;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* wall patterns - dark purple stripes */
+.buildings__wall__patterns {
+  position: absolute;
+  top: 75px;
+  width: 100%;
+  height: 65px;
+  background: linear-gradient(
+    to right,
+    transparent 70px,
+    #7475b9 70px 75px,
+    transparent 75px 145px,
+    #7475b9 145px 150px,
+    transparent 150px 220px,
+    #7475b9 220px 225px,
+    transparent 225px
+  );
+  border: 5px solid #7475b9;
+  border-right: none;
+  border-bottom: 10px solid #7475b9;
+}
+
+/* wall patterns - dots */
+.buildings__wall__patterns::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  box-shadow:
+  /* taints */ 0 5px 0 #7475b9, 5px 0 0 #7475b9,
+    30px 30px 0 #7475b9, 35px 35px 0 0 #7475b9, 80px 45px 0 #7475b9,
+    80px 40px 0 #7475b9, 85px 35px 0 #7475b9, 120px 15px 0 #7475b9,
+    130px 15px 0 #7475b9, 170px 35px 0 #7475b9, 200px 5px 0 #7475b9,
+    200px 15px 0 #7475b9, 250px 15px 0 #7475b9, 280px 40px 0 #7475b9,
+    285px 45px 0 #7475b9, /* stripe breakpoints */ -5px 45px 0 #8d93bf,
+    0 50px 0 #8d93bf, 70px 20px 0 #8d93bf, 65px 50px 0 #8d93bf,
+    145px 45px 0 #8d93bf, 140px 50px 0 #8d93bf, 150px 50px 0 #8d93bf,
+    220px 20px 0 #8d93bf, 225px 50px 0 #8d93bf, 280px 50px 0 #8d93bf;
+}
+
+/* right wall picture - borders */
+.buildings__wall__picture {
+  position: absolute;
+  right: 5px;
+  bottom: 15px;
+  width: 50px;
+  height: 30px;
+  background: linear-gradient(#50403b 10px, hsl(14, 15%, 15%) 10px);
+  box-shadow: 0 10px 0 -5px #7475b9;
+}
+/* right wall picture - main background */
+.buildings__wall__picture::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  background: #eadfdf;
+}
+/* right wall picture - dots pattern */
+.buildings__wall__picture::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  box-shadow: 10px 10px 0 #967474, 15px 15px 0 #967474, 25px 10px 0 #967474,
+    25px 20px 0 #967474, 35px 5px 0 #967474;
+}
+
+/* main building in the middle */
+.buildings__main {
+  width: 400px;
+  height: 225px;
+  background: linear-gradient(
+    #9e4f46 125px,
+    #c47a71 125px 130px,
+    #913838 130px 150px,
+    hsl(0, 0%, 20%) 150px 155px,
+    #ba4f43 155px 200px,
+    #c0cbdc 200px 205px,
+    #8b9bb4 205px
+  );
+  transform: translateY(-75px);
+  box-shadow: 0 -5px 0 black, -5px 0 0 black, 5px 0 0 black,
+    0 5px 0 rgba(0, 0, 0, 0.4);
+  border-bottom: 5px solid black;
+}
+
+/* main building - rooms container */
+.buildings__main__rooms {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 45px;
+}
+
+/* main building - rooms */
+.buildings__main__rooms__roomLeft,
+.buildings__main__rooms__roomMid,
+.buildings__main__rooms__roomRight {
+  display: grid;
+  place-items: center;
+  width: 75px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    white 5px,
+    #ece9df 5px 75px,
+    #cfc7ad 75px
+  );
+  box-shadow: -5px 0 0 0 black, 5px 0 0 0 black, 0 5px 0 0 #cfc7ad,
+    0 5px 0 5px #c0cbdc, 0 20px 0 5px #8b9bb4, 0 25px 0 5px black,
+    0 30px 0 5px rgba(0, 0, 0, 0.4);
+}
+
+/* mian building - windows */
+:is(.buildings__main__rooms__roomLeft, .buildings__main__rooms__roomMid, .buildings__main__rooms__roomRight)::before {
+  content: '';
+  width: 40%;
+  height: 60%;
+  background: linear-gradient(#266cb7 33%, #558ecb 33% 66%, #75a5da 66%);
+  border: 5px solid black;
+  box-shadow: 0 5px 0 #cfc7ad;
+}
