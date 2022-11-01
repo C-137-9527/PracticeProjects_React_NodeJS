@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+:root {
+  --color-highlight: #758dde;
+  --fontSize-small: 0.9rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #a8bcfd, #6f7ca6);
+  font-family: 'Ubuntu';
+  font-size: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}

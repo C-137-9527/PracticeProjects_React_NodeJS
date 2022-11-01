@@ -1,0 +1,77 @@
+.conversation {
+  display: grid;
+  position: relative;
+  width: 70%;
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+/* no conversation message */
+.conversation h2 {
+  margin: auto;
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  color: hsl(0 0% 0% /0.3);
+}
+
+/* current active conversation */
+.activeConversationWindow {
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 10%;
+  background-color: #5f5b90;
+  color: #dddafe;
+}
+
+.toolbar div {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.messagesList {
+  height: 80%;
+  background-color: #dedcf7;
+}
+
+.newMessage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 10%;
+}
+
+.newMessage input {
+  height: 100%;
+  width: 70%;
+  border: none;
+  outline: none;
+  background-color: whitesmoke;
+}
+
+.newMessage label {
+  cursor: pointer;
+  color: #677ac1;
+  font-size: 1.5rem;
+}
+
+.newMessage label input {
+  display: none;
+}
+
+.newMessage button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #677ac1;
+  color: whitesmoke;
+}

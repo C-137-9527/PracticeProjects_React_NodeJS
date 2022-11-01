@@ -1,0 +1,64 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 1.5rem 3rem;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.form h2 {
+  text-align: center;
+  color: #63607a;
+  font-size: 2rem;
+}
+
+.form input {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  outline: none;
+  width: 250px;
+  height: 30px;
+}
+
+.form input[type='file'] {
+  display: none;
+}
+
+.form input::placeholder {
+  color: gray;
+  font-size: var(--fontSize-small);
+}
+
+.form label {
+  display: flex;
+  gap: 5px;
+  align-items: flex-end;
+  color: #abbafa;
+  cursor: pointer;
+  font-size: var(--fontSize-small);
+}
+
+.imageIcon {
+  font-size: 1.5rem;
+  color: var(--color-highlight);
+}
+
+.form button {
+  padding: 0.5rem;
+  border: none;
+  background-color: var(--color-highlight);
+  color: white;
+  font-weight: 700;
+}
+
+.form p {
+  text-align: center;
+  font-size: var(--fontSize-small);
+  color: gray;
+}
+
+.form a {
+  color: var(--color-highlight);
+}
